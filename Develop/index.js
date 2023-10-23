@@ -45,13 +45,13 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('README.md', data, (err) =>
+    fs.writeFile(fileName, data, (err) =>
         err ? console.error(err) : console.log('Your README has been created!')
     );
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
@@ -61,6 +61,6 @@ function init() {}
         .catch((error) => {
             console.error("Error has occurred:", error);
         });
-        
+}
 // Function call to initialize app
 init();
