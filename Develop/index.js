@@ -3,7 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMD = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: "input",
@@ -23,7 +23,18 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Write a description of the usage of your project.",
+        message: "Write a description of how to use your project.",
+    },
+    {
+        type: "checkbox",
+        name: "license",
+        message: "Select a license for your project.",
+        choices: ["MIT", "Apache 2.0", "GNU", "Mozilla Public"],
+    },
+    {
+        type: "input",
+        name: "github",
+        message: "What is your GitHub username?",
     },
 ];
 
