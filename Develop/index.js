@@ -26,6 +26,16 @@ const questions = [
         message: "Write a description of how to use your project.",
     },
     {
+        type: "input",
+        name: "contribute",
+        message: "Write instructions on how to contribute to the project."
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Write tests for your project."
+    },
+    {
         type: "checkbox",
         name: "license",
         message: "Select a license for your project.",

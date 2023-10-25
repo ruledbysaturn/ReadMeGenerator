@@ -69,11 +69,17 @@ ${data.usage}
 ## License
 ${licenseSection}
 
+## Contributing
+${data.contribute}
+
+## Tests
+${data.tests}
+
 ## Questions
+If you have any questions, please do not hesitate to reach out.
 GitHub: [${data.github}](https://github.com/${data.github})
 Email: ${data.email}
 `;
 }
 
 module.exports = generateMarkdown;
-renderLicenseBadge()
