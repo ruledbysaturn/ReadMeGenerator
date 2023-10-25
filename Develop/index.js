@@ -29,7 +29,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Select a license for your project.",
-        choices: ["MIT", "Apache 2.0", "GNU", "Mozilla Public"],
+        choices: ["MIT", "Apache 2.0", "GNU", "Mozilla Public", "none"],
     },
     {
         type: "input",
@@ -43,14 +43,14 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+//function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
         err ? console.error(err) : console.log('Your README has been created!')
     );
 }
 
-// TODO: Create a function to initialize app
+//function to initialize app
 function init() {
     inquirer
         .prompt(questions)
